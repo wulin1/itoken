@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
 </head>
 <body>
-  <h1>欢迎itoken管理系统</h1>
+
+<p th:text="${session.users.id}">[]</p>
+<p th:text="${session.users.username}"></p>
+<p th:text="${session.users.password}"></p>
+<p th:text="${session.users.age}"></p>
+
 </body>
 </html>

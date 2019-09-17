@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: 123456
+    password: 123
     url: jdbc:mysql://localhost:3306/itoken-personnel
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
@@ -31,3 +31,7 @@ thymeleaf:
     view:
       prefix: /
       suffix: .html
+
+      mybatis:
+        mapper-locations: classpath:mapper/*.xml   //mybatis的mapper文件所在路径
+        type-aliases-package: com.itoken.personnel.entity   //实体类路径
