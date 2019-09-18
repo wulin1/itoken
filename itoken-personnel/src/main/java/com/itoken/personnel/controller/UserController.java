@@ -35,13 +35,13 @@ public class UserController {
         user.setPassword(password);
         user = this.userservice.dologin(user);
         if (user != null) {
-            session.setAttribute("users", user);
+            session.setAttribute("user", user);
             mav.setViewName("detail");
             return mav;
         } else {
             session.setAttribute("errormsg", "账号或密码错误!请重新输入");
         }
-        mav.setViewName("index");
+        mav.setViewName("login");
         return mav;
     }
 }
